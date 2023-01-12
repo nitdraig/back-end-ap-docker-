@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping ("/personas")
 @CrossOrigin(origins = {"https://a-agustin-portfolio-ap-68352.web.app", "http://localhost:4200"})
+@SuppressWarnings("unchecked")
 
 public class PersonaController {
     

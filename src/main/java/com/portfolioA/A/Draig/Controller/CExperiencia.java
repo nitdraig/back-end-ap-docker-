@@ -25,15 +25,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/explab")
 @CrossOrigin(origins = { "https://a-agustin-portfolio-ap-68352.web.app", "http://localhost:4200"})
+@SuppressWarnings("unchecked")
 
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
+   
     
     @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
-        return new ResponseEntity(list, HttpStatus.OK);
+        return new ResponseEntity(list, HttpStatus.OK); 
     }
     
     @GetMapping("/detail/{id}")
